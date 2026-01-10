@@ -1,0 +1,9 @@
+RewriteEngine On
+
+# IZINKAN FILE & FOLDER STATIS
+RewriteCond %{REQUEST_FILENAME} -f [OR]
+RewriteCond %{REQUEST_FILENAME} -d
+RewriteRule ^ - [L]
+
+# SEMUA KE index.php
+RewriteRule ^ index.php [L]
